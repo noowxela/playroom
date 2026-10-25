@@ -1,7 +1,7 @@
 # SDD: GitHub and GitHub Pages for Playroom
 
 - **Repo:** `01_project/zzz_not_active/playroom`
-- **Status:** `approved`
+- **Status:** `implemented`
 - **Date:** 2026-10-22
 - **Related:** [architecture.md](../architecture.md), [001-playroom-arcade.md](./001-playroom-arcade.md)
 
@@ -51,13 +51,16 @@ Playroom is a single-page Vite + React + React Three Fiber arcade. It is not a g
 
 ## 5. Acceptance criteria and verification
 
-- [ ] `https://github.com/noowxela/playroom` exists and `main` is pushed
-- [ ] `https://noowxela.github.io/playroom/` returns 200, with scripts under `/playroom/assets/`
-- [ ] The page shows the hardware still, and the GLB requests are under `/playroom/models/`
-- [ ] A local build without `GITHUB_ACTIONS` still emits `/assets/` and `/models/`
+- [x] `https://github.com/noowxela/playroom` exists and `main` is pushed
+- [x] `https://noowxela.github.io/playroom/` returns 200, with scripts under `/playroom/assets/`
+- [x] The page shows the hardware still, and the GLB requests are under `/playroom/models/`
+- [x] A local build without `GITHUB_ACTIONS` still emits `/assets/` and `/models/`
+
+Verified 2026-10-22. `curl -sI https://noowxela.github.io/playroom/` is 200. The HTML loads `/playroom/assets/index-2k2r-yZv.js` and `/playroom/models/crt.glb` is 200. A local build without `GITHUB_ACTIONS` emits `/assets/` and `/favicon.svg`. In the browser the WebGL canvas is 2332×1419, all four GLBs load from `/playroom/models/`, and POWER ON opens Snake. Vitest: 8 tests passed.
 
 ## 6. Status history
 
 | Date | Status | Note |
 | --- | --- | --- |
 | 2026-10-22 | approved | User asked to deploy this repo to GitHub and GitHub Pages |
+| 2026-10-22 | implemented | Public repo and Pages are live at /playroom/ |

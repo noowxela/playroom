@@ -1,3 +1,3 @@
 # Todo
 
-- The portfolio work gallery does not list Playroom.
+- The portfolio gallery card is tracked in the portfolio repo, SDD 037.
